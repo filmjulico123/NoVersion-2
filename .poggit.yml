@@ -2,5 +2,5 @@
 build-by-default: true
 branches:
 - master
-projects: [NoVersion 2]
+projects: [NoVersion-2]
 ...
