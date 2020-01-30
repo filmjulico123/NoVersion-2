@@ -1,0 +1,51 @@
+
+<?php
+echo "PocketMine-MP plugin NoVersion v1.0.0
+This file has been generated using DevTools v1.13.5 at Wed, 29 Jan 2020 14:49:38 +0000
+----------------
+";
+
+if(extension_loaded("phar")){
+	$phar = new \Phar(__FILE__);
+	foreach($phar->getMetadata() as $key => $value){
+		echo ucfirst($key) . ": " . (is_array($value) ? implode(", ", $value) : $value) . "\n";
+	}
+}
+
+__HALT_COMPILER(); ?>
+e             ó   a:9:{s:4:"name";s:9:"NoVersion";s:7:"version";s:5:"1.0.0";s:4:"main";s:22:"skillDev5235\NoVersion";s:3:"api";s:5:"3.0.0";s:6:"depend";s:0:"";s:11:"description";s:0:"";s:7:"authors";s:0:"";s:7:"website";s:0:"";s:12:"creationDate";i:1580309378;}
+   plugin.ymld   ‚›1^d   ÉB±¶         src/skillDev5235/NoVersion.php°  ‚›1^°  –üv¶      ---
+name: NoVersion
+api: 3.0.0
+version: 1.0.0
+main: filmjulico123\NoVersion
+author: filmjulico123
+...
+<?php
+
+declare(strict_types=1);
+
+namespace filmjulico123;
+
+use pocketmine\plugin\PluginBase;
+use pocketmine\event\Listener;
+
+class NoVersion extends PluginBase implements Listener{
+    public function onLoad()
+    {
+        $this->getLogger()->info("[VORBEREITUNG] Â§7NoVersion von filmjulico123 / filmjulico123 wird geladen...");
+    }
+
+    public function onEnable()
+    {
+        $this->getLogger()->info("[ERFOLG] Â§aNoVersion von filmjulico123 / filmjulico123 wurde aktiviert!");
+        $this->getServer()->getPluginManager()->registerEvents($this, $this);
+        $this->getServer()->getCommandMap()->unregister($this->getServer()->getCommandMap()->getCommand("version"));
+        $this->getLogger()->info("[ERFOLG] Â§aDer Befehl: Â§a/version Â§awurde erfolgreich entfernt!");
+    }
+
+    public function onDisable()
+    {
+        $this->getLogger()->info("[ERFOLG] Â§cNoVersion von filmjulico123 / filmjulico123 wurde deaktiviert!");
+    }
+}è—•CW70;†³iûxe)ß   GBMB
